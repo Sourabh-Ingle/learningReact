@@ -23,6 +23,8 @@
 
 .card .inputValue{
   width: 100%;
+  margin-bottom: 2rem;
+  padding: 0;
   
 }
 
@@ -34,7 +36,6 @@
     font-weight: 550;
     padding: 0.25rem 1rem;
     color: darkviolet;
-    margin-bottom: 2rem;
 }
 
 .card .inputValue .copy{
@@ -56,6 +57,7 @@
 
 .flexCard{
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
