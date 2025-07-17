@@ -1,5 +1,6 @@
 
 import './App.css'
+import CurrencyConvertor from './components/currencyConvertor/CurrencyConvertor'
 import PasswordConverter from './components/passwordGen/PasswordConverter'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
 
   return (
     <>
+      < CurrencyConvertor />
       <PasswordConverter />
     </>
   )
