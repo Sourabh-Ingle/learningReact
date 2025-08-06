@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { Outlet } from 'react-router-dom';
 // import { style } from './passwordConverter.css'; 
 
 
@@ -82,7 +83,7 @@ const PasswordConverter = () => {
 
               </div>
           </div>
-
+      <Outlet/>
       </div>
   )
 }

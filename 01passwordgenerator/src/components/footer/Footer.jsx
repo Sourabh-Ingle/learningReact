@@ -2,7 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <section>
+      <div className="container">
+        <h3 className='footer-title'>This is try and catch for learning react 19 !!!</h3>
+      </div>
+    </section>
   )
 }
 
