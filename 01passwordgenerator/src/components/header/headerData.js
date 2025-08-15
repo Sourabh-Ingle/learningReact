@@ -16,6 +16,11 @@ const headerData =()=>{
             id: 3,
             title: 'Password Generator',
             path: 'password-generator'
+        },
+        {
+            id: 4,
+            title: 'ToDo App',
+            path: 'todo'
         }
 
     ])

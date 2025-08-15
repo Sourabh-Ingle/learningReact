@@ -11,7 +11,7 @@ const Header = () => {
           <div className="container-nav">
               <ul className="HeaderList">
                   {navData.map(data => {
-                      console.log(data,"data")
+                     
                       return (
                           <li className="navTabs" key={data.id}>
                               <NavLink

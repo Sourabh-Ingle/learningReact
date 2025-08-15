@@ -8,6 +8,7 @@ import PasswordConverter from './components/passwordGen/PasswordConverter.jsx';
 import Home from './components/home/Home.jsx';
 import User from './components/user/User.jsx';
 import Sam from './components/sam/Sam.jsx';
+import ToDo from './components/todo/ToDo.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,7 +18,8 @@ const router = createBrowserRouter(
       <Route path='password-generator' element={<PasswordConverter />} >
         <Route path='sam' element={<Sam/>} />
       </Route>
-      <Route path='user:id' element={<User/>} />
+      <Route path='user:id' element={<User />} />
+      <Route path='todo' element={<ToDo />} />
     </Route>
   )
 )
