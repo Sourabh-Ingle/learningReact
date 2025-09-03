@@ -83,12 +83,56 @@ export class Service{
             return await this.databases.listDocuments({
                 databaseId: conf.appwtiteDatabaseId,
                 collectionId: conf.appwriteCollectionId,
-                queries:[]
+                queries:[Query.equal("status","active")]
             })
-        } catch (error) {
             
+        } catch (error) {
+            console.log("Appwrite server :: get active post :: error", error);
+            return false
         }
     }
+
+    // file upload service method (storage methods)
+    async uploadFile(file) {
+        try {
+            return await this.bucket.createFile({
+                bucketId:conf.appwriteBucketId ,
+                fileId: ID.unique(),
+                file,
+            })
+        } catch (error) {
+            console.log("Appwrite server :: upload file :: error", error);
+            return false
+        }
+    }
+
+    async deleteFile(fileId) {
+        try {
+             await this.bucket.deleteFile({
+                bucketId: conf.appwriteBucketId,
+                fileId
+            })
+            return true
+        } catch (error) {
+            console.log("Appwrite server :: delete file :: error", error);
+            return false
+        }
+    }
+
+    // preview
+    getFilePreview(fileId) {
+        try {
+            return this.bucket.getFilePreview({
+                bucketId: conf.appwriteBucketId,
+                fileId
+            })
+
+        } catch (error) {
+            console.log("Appwrite server :: preview file :: error", error);
+            return false
+        }
+    }
+
 }
 
 const service = new Service();
