@@ -5,7 +5,8 @@ import Logo from './Logo';
 import LogoutBtn from './header/LogoutBtn';
 import Select from './select/Select';
 import Input from './input/Input';
-import Button from './Button'
+import Button from './Button';
+import Select from './select/Select';
 
 
 
@@ -13,5 +14,5 @@ import Button from './Button'
 
 export {
     Header, Footer,
-    Container,LogoutBtn,Logo,Input,Select,Button
+    Container,LogoutBtn,Logo,Input,Select,Button,Select
 } 
